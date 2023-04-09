@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 import unittest
-import mediawikiapi
+import memorytauapi
 from bs4 import BeautifulSoup
 from decimal import Decimal
-from typing import Dict, Any
-from mediawikiapi import MediaWikiAPI
-from mediawikiapi.config import Config
-from mediawikiapi.wikipediapage import WikipediaPage
+from memorytauapi import MemoryTauAPI
+from memorytauapi.memorytaupage import MemoryTauPage
 from tests.request_mock_data import (
     mock_data,
     mock_images,
@@ -20,7 +18,7 @@ from tests.request_mock_data import (
     mock_category_members_physics,
 )
 
-api = MediaWikiAPI()
+api = MemoryTauAPI()
 
 
 class TestPageSetUp(unittest.TestCase):
@@ -30,7 +28,7 @@ class TestPageSetUp(unittest.TestCase):
         """Test that page raises a PageError for a nonexistant page."""
         # Callicarpa?
         purpleberry = lambda: api.page("purpleberrynotexist", auto_suggest=False)
-        self.assertRaises(mediawikiapi.PageError, purpleberry)
+        self.assertRaises(memorytauapi.PageError, purpleberry)
 
     def test_redirect_true(self) -> None:
         """Test that a page successfully redirects a query."""
@@ -45,18 +43,18 @@ class TestPageSetUp(unittest.TestCase):
     def test_redirect_false(self) -> None:
         """Test that page raises an error on a redirect when redirect == False."""
         mp = api.page("Template:cn", auto_suggest=False, redirect=False)
-        self.assertIsInstance(mp, WikipediaPage)
+        self.assertIsInstance(mp, MemoryTauPage)
 
     def test_redirect_no_normalization(self) -> None:
         """Test that a page with redirects but no normalization query loads correctly"""
         the_party = api.page("Communist Party", auto_suggest=False)
-        self.assertIsInstance(the_party, WikipediaPage)
+        self.assertIsInstance(the_party, MemoryTauPage)
         self.assertEqual(the_party.title, "Communist party")
 
     def test_redirect_with_normalization(self) -> None:
         """Test that a page redirect with a normalized query loads correctly"""
         the_party = api.page("communist Party", auto_suggest=False)
-        self.assertIsInstance(the_party, WikipediaPage)
+        self.assertIsInstance(the_party, MemoryTauPage)
         self.assertEqual(the_party.title, "Communist party")
 
     def test_redirect_normalization(self) -> None:
@@ -64,8 +62,8 @@ class TestPageSetUp(unittest.TestCase):
         capital_party = api.page("Communist Party", auto_suggest=False)
         lower_party = api.page("communist Party", auto_suggest=False)
 
-        self.assertIsInstance(capital_party, WikipediaPage)
-        self.assertIsInstance(lower_party, WikipediaPage)
+        self.assertIsInstance(capital_party, MemoryTauPage)
+        self.assertIsInstance(lower_party, MemoryTauPage)
         self.assertEqual(capital_party.title, "Communist party")
         self.assertEqual(capital_party, lower_party)
 
@@ -147,15 +145,6 @@ class TestPage(unittest.TestCase):
         """Test the parent id."""
         self.assertEqual(self.celtuce.parent_id, mock_data["celtuce.parentid"])
         self.assertEqual(self.cyclone.parent_id, mock_data["cyclone.parentid"])
-
-    def test_images(self) -> None:
-        """Test the list of image URLs."""
-        self.assertCountEqual(self.celtuce.images, mock_images["celtuce"])
-        self.assertCountEqual(self.cyclone.images, mock_images["cyclone"])
-
-    def test_hanging_page_image_query(self) -> None:
-        bill_foster_page = api.page("Bill Foster (politician)", preload=True)
-        self.assertCountEqual(bill_foster_page.images, mock_bill_foster_images)
 
     def test_references(self) -> None:
         """Test the list of reference URLs."""

@@ -15,7 +15,7 @@ P = ParamSpec("P")
 R = TypeVar("R")
 
 
-class memoized_class(object):
+class MemoizedClass(object):
     """
     Decorator.
     Caches a function's return value each time it is called.
@@ -46,27 +46,17 @@ class memoized_class(object):
         """Return the function's docstring."""
         return self.func.__doc__
 
-    def __get__(self, obj: Optional[R], objtype: Optional[R]) -> Any:
+    def __get__(self, obj: Optional[R], obj_type: Optional[R]) -> Any:
         """Support instance methods."""
         return functools.partial(self.__call__, obj)
 
 
 # This decorator wrapper was added over class one for auto api document generation
 def memorized(func: Callable[..., Any]) -> Callable[..., Any]:
-    memoize = memoized_class(func)
+    memoize = MemoizedClass(func)
 
     @functools.wraps(func)
     def helper(*args: Any, **kwargs: Any) -> Any:
         return memoize(*args, **kwargs)
 
     return helper
-
-
-def clean_infobox(text: str) -> str:
-    text = re.sub(r"\[\d\]", "", text)
-    text = re.sub(r"\n", " ", text)
-    if sys.version_info[0] < 3:
-        text = text.replace("\xa0", " ")
-    else:
-        text = text.replace("\xa0", " ")
-    return text.strip()

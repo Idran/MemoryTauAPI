@@ -5,7 +5,7 @@ Global wikipedia exception and warning classes.
 from typing import Optional
 
 ODD_ERROR_MESSAGE = (
-    "This shouldn't happen. Please report on GitHub: github.com/lehinevych/MediaWikiAPI"
+    "This shouldn't happen. Please report on GitHub: https://github.com/Idran/MemoryTauAPI"
 )
 
 
@@ -42,21 +42,6 @@ class PageError(MediaWikiAPIException):
             return 'Page id "{0}" does not match any pages. Try another id!'.format(
                 self.pageid
             )
-
-
-class LanguageError(MediaWikiAPIException):
-    """Exception raised when a language prefix is set which is not available"""
-
-    def __init__(self, language: str):
-        self.language = language
-
-    def __unicode__(self) -> str:
-        return (
-            '"{0}" is not a language prefix available in Wikipedia. '
-            "Run wikipedia.languages().keys() to get available prefixes.".format(
-                self.language
-            )
-        )
 
 
 class RedirectError(MediaWikiAPIException):

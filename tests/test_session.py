@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import unittest
 
-from mediawikiapi import MediaWikiAPI
+from memorytauapi import MemoryTauAPI
 
-api = MediaWikiAPI()
+api = MemoryTauAPI()
 
 
 class TestSession(unittest.TestCase):

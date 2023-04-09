@@ -3,7 +3,6 @@ import requests
 from datetime import datetime
 from typing import Dict, Any, Union, Optional
 from .config import Config
-from .language import Language
 
 
 class RequestSession(object):
@@ -29,20 +28,14 @@ class RequestSession(object):
         self,
         params: Dict[str, Any],
         config: Config,
-        language: Optional[Union[str, Language]] = None,
     ) -> Dict[str, Any]:
         """
-        Make a request to the Wikipedia API using the given search parameters,
-        language and configuration
+        Make a request to the Wikipedia API using the given search parameters and configuration
 
         Arguments:
 
         * params (dictionary)
         * config - the configuration to be used for request
-
-        Keyword arguments:
-
-        * language - the wiki language
 
         """
         params["format"] = "json"
@@ -65,7 +58,7 @@ class RequestSession(object):
             self.__rate_limit_last_call = datetime.now()
 
         r = self.session.get(
-            config.get_api_url(language),
+            config.get_api_url(),
             params=params,
             headers=headers,
             timeout=config.timeout,

@@ -50,12 +50,12 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
             "pages": {
                 "-1": {
                     "missing": "",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Purpleberry&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Purpleberry&action=edit",
                     "title": "Purpleberry",
                     "contentmodel": "wikitext",
                     "pagelanguage": "en",
                     "ns": 0,
-                    "fullurl": "http://en.wikipedia.org/wiki/Purpleberry",
+                    "fullurl": "https://www.mysidia.org/trekwiki/Purpleberry",
                 }
             },
         }
@@ -87,7 +87,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 607768264,
                     "pageid": 125414,
                     "title": "Edison, New Jersey",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Edison,_New_Jersey&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Edison,_New_Jersey&action=edit",
                     "counter": "",
                     "length": 85175,
                     "contentmodel": "wikitext",
@@ -112,14 +112,14 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 608086859,
                     "pageid": 37008,
                     "title": "Communist party",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Communist_party&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Communist_party&action=edit",
                     "counter": "",
                     "length": 7868,
                     "contentmodel": "wikitext",
                     "pagelanguage": "en",
                     "touched": "2014-05-26T01:19:01Z",
                     "ns": 0,
-                    "fullurl": "http://en.wikipedia.org/wiki/Communist_party",
+                    "fullurl": "https://www.mysidia.org/trekwiki/Communist_party",
                 }
             },
         }
@@ -138,14 +138,14 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 608086859,
                     "pageid": 37008,
                     "title": "Communist party",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Communist_party&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Communist_party&action=edit",
                     "counter": "",
                     "length": 7868,
                     "contentmodel": "wikitext",
                     "pagelanguage": "en",
                     "touched": "2014-05-26T01:19:01Z",
                     "ns": 0,
-                    "fullurl": "http://en.wikipedia.org/wiki/Communist_party",
+                    "fullurl": "https://www.mysidia.org/trekwiki/Communist_party",
                 }
             },
         }
@@ -162,14 +162,14 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 608086859,
                     "pageid": 37008,
                     "title": "Communist party",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Communist_party&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Communist_party&action=edit",
                     "counter": "",
                     "length": 7868,
                     "contentmodel": "wikitext",
                     "pagelanguage": "en",
                     "touched": "2014-05-26T01:19:01Z",
                     "ns": 0,
-                    "fullurl": "http://en.wikipedia.org/wiki/Communist_party",
+                    "fullurl": "https://www.mysidia.org/trekwiki/Communist_party",
                 }
             }
         }
@@ -186,7 +186,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 607768264,
                     "pageid": 125414,
                     "title": "Edison, New Jersey",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Edison,_New_Jersey&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Edison,_New_Jersey&action=edit",
                     "counter": "",
                     "length": 85175,
                     "contentmodel": "wikitext",
@@ -210,7 +210,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 567152802,
                     "pageid": 18803364,
                     "title": "Dodge Ram (disambiguation)",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Dodge_Ram_(disambiguation)&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Dodge_Ram_(disambiguation)&action=edit",
                     "counter": "",
                     "length": 702,
                     "contentmodel": "wikitext",
@@ -218,7 +218,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "touched": "2013-08-08T15:12:27Z",
                     "ns": 0,
                     "pageprops": {"disambiguation": ""},
-                    "fullurl": "http://en.wikipedia.org/wiki/Dodge_Ram_(disambiguation)",
+                    "fullurl": "https://www.mysidia.org/trekwiki/Dodge_Ram_(disambiguation)",
                 }
             }
         }
@@ -226,7 +226,6 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
     (
         ("prop", "revisions"),
         ("rvlimit", 1),
-        ("rvparse", ""),
         ("rvprop", "content"),
         ("titles", "Dodge Ram (disambiguation)"),
     ): {
@@ -285,14 +284,14 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 566847704,
                     "pageid": 48338,
                     "title": "Butterfly",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Butterfly&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Butterfly&action=edit",
                     "counter": "",
                     "length": 60572,
                     "contentmodel": "wikitext",
                     "    pagelanguage": "en",
                     "touched": "2013-08-07T11:15:37Z",
                     "ns": 0,
-                    "fullurl": "http://en.wikipedia.org/wiki/Butterfly",
+                    "fullurl": "https://www.mysidia.org/trekwiki/Butterfly",
                 }
             }
         }
@@ -310,7 +309,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 566847704,
                     "pageid": 48338,
                     "title": "Butterfly",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Butterfly&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Butterfly&action=edit",
                     "counter": "",
                     "length": 60572,
                     "contentmodel": "wikitext",
@@ -370,7 +369,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 562756085,
                     "pageid": 1868108,
                     "title": "Celtuce",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Celtuce&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Celtuce&action=edit",
                     "counter": "",
                     "length": 1662,
                     "contentmodel": "wikitext",
@@ -394,14 +393,14 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 572715399,
                     "pageid": 21196082,
                     "title": "Tropical Depression Ten (2005)",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Tropical_Depression_Ten_(2005)&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Tropical_Depression_Ten_(2005)&action=edit",
                     "counter": "",
                     "length": 8543,
                     "contentmodel": "wikitext",
                     "pagelanguage": "en",
                     "touched": "2013-09-18T13:45:33Z",
                     "ns": 0,
-                    "fullurl": "http://en.wikipedia.org/wiki/Tropical_Depression_Ten_(2005)",
+                    "fullurl": "https://www.mysidia.org/trekwiki/Tropical_Depression_Ten_(2005)",
                 }
             }
         }
@@ -418,14 +417,14 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 604138653,
                     "pageid": 5094570,
                     "title": "Great Wall of China",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Great_Wall_of_China&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Great_Wall_of_China&action=edit",
                     "counter": "",
                     "length": 23895,
                     "contentmodel": "wikitext",
                     "pagelanguage": "en",
                     "touched": "2013-08-17T03:30:23Z",
                     "ns": 0,
-                    "fullurl": "http://en.wikipedia.org/wiki/Great_Wall_of_China",
+                    "fullurl": "https://www.mysidia.org/trekwiki/Great_Wall_of_China",
                 }
             }
         }
@@ -492,7 +491,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "imageinfo": [
                         {
                             "url": "http://upload.wikimedia.org/wikipedia/en/9/99/Question_book-new.svg",
-                            "descriptionurl": "http://en.wikipedia.org/wiki/File:Question_book-new.svg",
+                            "descriptionurl": "https://www.mysidia.org/trekwiki/File:Question_book-new.svg",
                         }
                     ],
                     "title": "File:Question book-new.svg",
@@ -553,7 +552,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "imageinfo": [
                         {
                             "url": "http://upload.wikimedia.org/wikipedia/en/4/4a/Commons-logo.svg",
-                            "descriptionurl": "http://en.wikipedia.org/wiki/File:Commons-logo.svg",
+                            "descriptionurl": "https://www.mysidia.org/trekwiki/File:Commons-logo.svg",
                         }
                     ],
                     "title": "File:Commons-logo.svg",
@@ -565,7 +564,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "imageinfo": [
                         {
                             "url": "http://upload.wikimedia.org/wikipedia/en/4/48/Folder_Hexagonal_Icon.svg",
-                            "descriptionurl": "http://en.wikipedia.org/wiki/File:Folder_Hexagonal_Icon.svg",
+                            "descriptionurl": "https://www.mysidia.org/trekwiki/File:Folder_Hexagonal_Icon.svg",
                         }
                     ],
                     "title": "File:Folder Hexagonal Icon.svg",
@@ -577,7 +576,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "imageinfo": [
                         {
                             "url": "http://upload.wikimedia.org/wikipedia/en/e/e7/Cscr-featured.svg",
-                            "descriptionurl": "http://en.wikipedia.org/wiki/File:Cscr-featured.svg",
+                            "descriptionurl": "https://www.mysidia.org/trekwiki/File:Cscr-featured.svg",
                         }
                     ],
                     "title": "File:Cscr-featured.svg",
@@ -601,7 +600,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "imageinfo": [
                         {
                             "url": "http://upload.wikimedia.org/wikipedia/en/f/fd/Portal-puzzle.svg",
-                            "descriptionurl": "http://en.wikipedia.org/wiki/File:Portal-puzzle.svg",
+                            "descriptionurl": "https://www.mysidia.org/trekwiki/File:Portal-puzzle.svg",
                         }
                     ],
                     "title": "File:Portal-puzzle.svg",
@@ -961,7 +960,6 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
     (
         ("prop", "revisions"),
         ("rvlimit", 1),
-        ("rvparse", ""),
         ("rvprop", "content"),
         ("titles", "Celtuce"),
     ): {
@@ -1125,7 +1123,7 @@ mock_wiki_calls: Dict[Tuple, Dict[str, Any]] = {  # type: ignore
                     "lastrevid": 575687826,
                     "pageid": 1868108,
                     "title": "Celtuce",
-                    "editurl": "http://en.wikipedia.org/w/index.php?title=Celtuce&action=edit",
+                    "editurl": "https://www.mysidia.org/trek/index.php?title=Celtuce&action=edit",
                     "counter": "",
                     "length": 1960,
                     "contentmodel": "wikitext",

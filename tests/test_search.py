@@ -3,8 +3,8 @@ import unittest
 
 from collections import defaultdict
 from typing import Dict, Any
-from mediawikiapi import MediaWikiAPI
-from mediawikiapi.config import Config
+from memorytauapi import MemoryTauAPI
+from memorytauapi.config import Config
 from tests.request_mock_data import mock_data, mock_wiki_calls
 
 
@@ -18,7 +18,7 @@ class _wiki_request(object):
         return mock_wiki_calls[tuple(sorted(params.items()))]
 
 
-api = MediaWikiAPI()
+api = MemoryTauAPI()
 api.session.request = _wiki_request()  # type:ignore
 
 

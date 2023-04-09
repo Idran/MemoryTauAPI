@@ -17,7 +17,7 @@ from a page, and more. Wikipedia wraps the [MediaWiki API](https://www.mediawiki
 Wikipedia data, not getting it.
 
 ``` python
->>> from mediawikiapi import MediaWikiAPI
+>>> from memorytauapi import MediaWikiAPI
 >>> mediawikiapi = MediaWikiAPI()
 >>> print(mediawikiapi.summary("Wikipedia"))
 # Wikipedia (/ˌwɪkɨˈpiːdiə/ or /ˌwɪkiˈpiːdiə/ WIK-i-PEE-dee-ə) is a collaboratively edited, multilingual, free Internet encyclopedia supported by the non-profit Wikimedia Foundation...
@@ -29,7 +29,7 @@ Wikipedia data, not getting it.
 >>> ny.title
 # u'New York (state)'
 >>> ny.url
-# u'http://en.wikipedia.org/wiki/New_York_(state)'
+# u'https://www.mysidia.org/trekwiki/New_York_(state)'
 >>> ny.content
 # u'New York is a state in the northeastern United States. New York was one of the original thir'...
 >>> ny.links[0]
